@@ -1,4 +1,4 @@
-@task
+@allTask @web
 Feature: Login to opensource-demo then add new data and assert it is added , delete new user and assert it is deleted
   Background: Login to Admin page
     Given User is navigating "https://opensource-demo.orangehrmlive.com/"
@@ -7,9 +7,15 @@ Feature: Login to opensource-demo then add new data and assert it is added , del
   Scenario: adding new data and verifying that it is added
     Given The number of records found
     When User Navigating to Add new user Page
-    And User is adding new data with username "new user"
-    Then verify number of records increased by 1
-#  Scenario: Searching for new username and delete the new user then verify that it is deleted
-#    Given the username "new user"
-#    When User is deleting the new user
-#    Then verify number of records decreased by 1
+    And Adding new user
+    |ESS|
+    |Ranga  Akunuri|
+    |Enabled |
+    |new user|
+    |password1234|
+    Then Assert success message
+    And verify number of records increased by 1
+  Scenario: Searching for new username and delete the new user then verify that it is deleted
+    Given the username "new user" search for it
+    When User is deleting username "new user" and resetting search
+    Then Verify number of records decreased by 1

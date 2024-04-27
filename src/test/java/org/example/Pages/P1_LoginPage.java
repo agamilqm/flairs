@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class P1_LoginPage {
-    String adminTabLocator = "//li//a[contains(.,\"Admin\")]";
+    private String adminTabLocator = "//li//a[contains(.,\"Admin\")]";
     public void enterUsernameAndPassword(String username , String password){
 
         String usernameLocator = "username";
