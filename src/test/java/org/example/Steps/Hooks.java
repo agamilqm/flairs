@@ -15,16 +15,16 @@ public class Hooks {
     @Before
     public static void testSetup ()
     {
-//        WebDriverManager.chromedriver().clearDriverCache().setup();
-//        driver = new ChromeDriver();
-//        driver.manage().window().maximize();
-//        driver.manage().timeouts().implicitlyWait(Duration.of(5, ChronoUnit.SECONDS));
+        WebDriverManager.chromedriver().clearDriverCache().setup();
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.of(5, ChronoUnit.SECONDS));
         RestAssuredExtension restAssuredExtension = new RestAssuredExtension();
     }
     @After
     public static void closeBrowser() throws InterruptedException
     {
-//        Thread.sleep(2000);
-//        driver.quit();
+        Thread.sleep(2000);
+        driver.quit();
     }
 }
