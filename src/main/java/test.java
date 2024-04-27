@@ -12,19 +12,19 @@ public class test {
 //
 //        System.out.println(recordsFoundString);
 //        System.out.println(matcher.group());
-
-        String input = "(8) Records Found"; // Make sure this matches your actual input scenario
-        String regex = "\\(\\s*(\\d+)\\s*\\)"; // Regex to match digits within parentheses, ignoring spaces
-
-        System.out.println("Input: " + input);
-        System.out.println("Regex: " + regex);
-
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(input);
-
-        if (matcher.find()) {
-            String number = matcher.group(1);
-            System.out.println("The number inside the parentheses is: " + number);
-        }
+//
+//        String input = "(8) Records Found";
+//        String regex = "\\(\\s*(\\d+)\\s*\\)";
+//
+//        System.out.println("Input: " + input);
+//        System.out.println("Regex: " + regex);
+//
+//        Pattern pattern = Pattern.compile(regex);
+//        Matcher matcher = pattern.matcher(input);
+//
+//        if (matcher.find()) {
+//            String number = matcher.group(1);
+//            System.out.println("The number inside the parentheses is: " + number);
+//        }
     }
 }
